@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/Images">
+    <file>IB.png</file>
+    <file>pythonlogo.jpg</file>
+    <file>Qt.jpg</file>
+    <file>ib-logo.png</file>
+    <file>folder.png</file>
+    <file>save.png</file>
+    <file>new.png</file>
+  </qresource>
+</RCC>
