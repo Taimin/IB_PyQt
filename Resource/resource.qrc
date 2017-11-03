@@ -1,5 +1,20 @@
 <RCC>
   <qresource prefix="/Images">
+    <file>quit.jpg</file>
+    <file>tick.png</file>
+    <file>Candelsticks.png</file>
+    <file>Line.jpg</file>
+    <file>Trading.png</file>
+    <file>Account.png</file>
+    <file>connect.jpg</file>
+    <file>database.png</file>
+    <file>Login.png</file>
+    <file>Quandl.jpg</file>
+    <file>control.png</file>
+    <file>triangle_down.png</file>
+    <file>triangle_up.png</file>
+    <file>Zoom-In-icon.png</file>
+    <file>Zoom-Out-icon.png</file>
     <file>IB.png</file>
     <file>pythonlogo.jpg</file>
     <file>Qt.jpg</file>
