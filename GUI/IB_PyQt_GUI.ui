@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1272</width>
-    <height>879</height>
+    <height>924</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -68,9 +68,9 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
-       <widget class="QWidget" name="tab_7">
+       <widget class="QWidget" name="oneChart">
         <attribute name="title">
          <string>One-Chart</string>
         </attribute>
@@ -91,11 +91,11 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QGraphicsView" name="graphicsView"/>
+          <widget class="QGraphicsView" name="oneChartGraphicsView"/>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab_8">
+       <widget class="QWidget" name="multiChart">
         <attribute name="title">
          <string>Multi-Chart</string>
         </attribute>
@@ -116,11 +116,11 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QMdiArea" name="mdiArea"/>
+          <widget class="QMdiArea" name="multiChartMdiArea"/>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab_5">
+       <widget class="QWidget" name="tickerMonitor">
         <attribute name="title">
          <string>Ticker Monitor</string>
         </attribute>
@@ -141,7 +141,100 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QTableView" name="tableView"/>
+          <widget class="QTableWidget" name="tickerMonitorTableWidget">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::DashLine</enum>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>75</number>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>70</number>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Symbol</string>
+            </property>
+            <property name="textAlignment">
+             <set>AlignLeading|AlignVCenter</set>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Last</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>%Change</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Net Chng</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Bid</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Ask</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Volume</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>MTD</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>YTD</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string/>
+            </property>
+           </item>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -165,7 +258,7 @@
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="tab">
+       <widget class="QWidget" name="volumeTab">
         <attribute name="title">
          <string>Volume</string>
         </attribute>
@@ -186,11 +279,11 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QGraphicsView" name="graphicsView_2"/>
+          <widget class="QGraphicsView" name="volumeGraphicsView"/>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab_2">
+       <widget class="QWidget" name="optionChainTab">
         <attribute name="title">
          <string>Option Chain</string>
         </attribute>
@@ -211,14 +304,82 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QTableView" name="tableView_2"/>
-         </item>
-         <item>
-          <widget class="QTableView" name="tableView_3"/>
+          <widget class="QTableWidget" name="optionChainTableWidget">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::DashLine</enum>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>70</number>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>70</number>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Impl Vol.</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Delta</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Bid</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Ask</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Exp</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Strike</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Bid</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Ask</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Impl Vol.</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Delta</string>
+            </property>
+           </column>
+          </widget>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab_10">
+       <widget class="QWidget" name="futureChainTab">
         <attribute name="title">
          <string>Future Chain</string>
         </attribute>
@@ -239,7 +400,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QListView" name="listView_3"/>
+          <widget class="QTableWidget" name="futureChainTableWidget"/>
          </item>
         </layout>
        </widget>
@@ -300,13 +461,22 @@
      <string>Window</string>
     </property>
     <addaction name="actionControl"/>
-    <addaction name="actionMessages"/>
-    <addaction name="actionText_Data"/>
+    <addaction name="actionAccount"/>
+    <addaction name="actionTrading"/>
+   </widget>
+   <widget class="QMenu" name="menuConfig">
+    <property name="title">
+     <string>Config</string>
+    </property>
+    <addaction name="actionOption_Chain"/>
+    <addaction name="actionFuture_Chain"/>
+    <addaction name="actionOne_Chart"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuLogin"/>
    <addaction name="menuView"/>
    <addaction name="menuWindow"/>
+   <addaction name="menuConfig"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
@@ -322,6 +492,7 @@
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
+   <addaction name="actionQuit"/>
    <addaction name="separator"/>
    <addaction name="actionZoom_In"/>
    <addaction name="actionZoom_Out"/>
@@ -330,20 +501,30 @@
    <addaction name="actionTick_Plot"/>
    <addaction name="separator"/>
    <addaction name="actionControl"/>
-   <addaction name="actionMessages"/>
-   <addaction name="actionText_Data"/>
+   <addaction name="actionAccount"/>
+   <addaction name="actionTrading"/>
    <addaction name="separator"/>
    <addaction name="actionConnect"/>
    <addaction name="actionLogin_to_account"/>
    <addaction name="actionGet_Data_From_Quandl"/>
    <addaction name="actionGet_Data_From_Local_Database"/>
+   <addaction name="separator"/>
+   <addaction name="actionOne_Chart"/>
+   <addaction name="actionOption_Chain"/>
+   <addaction name="actionFuture_Chain"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QDockWidget" name="dockWidget">
+  <widget class="QDockWidget" name="controlDockWidget">
    <property name="minimumSize">
     <size>
      <width>250</width>
      <height>526</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>250</width>
+     <height>524287</height>
     </size>
    </property>
    <property name="acceptDrops">
@@ -365,7 +546,7 @@
    <attribute name="dockWidgetArea">
     <number>1</number>
    </attribute>
-   <widget class="QWidget" name="dockWidgetContents">
+   <widget class="QWidget" name="controlDockWidgetContents">
     <layout class="QVBoxLayout" name="verticalLayout">
      <property name="spacing">
       <number>0</number>
@@ -383,7 +564,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QToolBox" name="toolBox">
+      <widget class="QToolBox" name="controlToolBox">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
@@ -399,7 +580,7 @@
        <property name="currentIndex">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="page_1">
+       <widget class="QWidget" name="selectedTickerPage">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -407,8 +588,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>302</width>
-          <height>657</height>
+          <width>250</width>
+          <height>702</height>
          </rect>
         </property>
         <attribute name="icon">
@@ -435,7 +616,7 @@
           <number>3</number>
          </property>
          <item>
-          <widget class="QGroupBox" name="groupBox">
+          <widget class="QGroupBox" name="tickersGroupBox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -450,32 +631,22 @@
            </property>
            <layout class="QGridLayout" name="gridLayout">
             <property name="leftMargin">
-             <number>3</number>
-            </property>
-            <property name="topMargin">
-             <number>3</number>
-            </property>
-            <property name="rightMargin">
-             <number>3</number>
-            </property>
-            <property name="bottomMargin">
-             <number>3</number>
-            </property>
-            <property name="spacing">
              <number>5</number>
             </property>
-            <item row="0" column="0" colspan="2">
-             <widget class="QListView" name="listView">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QComboBox" name="tickerGroupComboBox"/>
             </item>
             <item row="1" column="0">
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="tickerGroupLineEdit">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -497,7 +668,7 @@
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="addTickerGroupButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -517,12 +688,19 @@
                </size>
               </property>
               <property name="text">
-               <string>Add</string>
+               <string>Add Group</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="pushButton_3">
+            <item row="0" column="1">
+             <widget class="QPushButton" name="loadTickerGroupButton">
+              <property name="text">
+               <string>Load Group</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="saveTickerGroupButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -542,12 +720,12 @@
                </size>
               </property>
               <property name="text">
-               <string>Save</string>
+               <string>Save Group</string>
               </property>
              </widget>
             </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="pushButton_5">
+            <item row="3" column="1">
+             <widget class="QPushButton" name="delTickerGroupButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -567,7 +745,7 @@
                </size>
               </property>
               <property name="text">
-               <string>Delete</string>
+               <string>Delete Group</string>
               </property>
              </widget>
             </item>
@@ -575,11 +753,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QGroupBox" name="groupBox_2">
+          <widget class="QGroupBox" name="tickerListBox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
              <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
+             <verstretch>1</verstretch>
             </sizepolicy>
            </property>
            <property name="title">
@@ -604,18 +782,8 @@
             <property name="spacing">
              <number>5</number>
             </property>
-            <item row="0" column="0" colspan="2">
-             <widget class="QListView" name="listView_2">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-             </widget>
-            </item>
             <item row="1" column="0">
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="tickerListLineEdit">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -637,7 +805,7 @@
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="pushButton_2">
+             <widget class="QPushButton" name="addTickerListButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -657,12 +825,12 @@
                </size>
               </property>
               <property name="text">
-               <string>Add</string>
+               <string>Add Ticker</string>
               </property>
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QPushButton" name="pushButton_4">
+             <widget class="QPushButton" name="saveTickerListButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -682,12 +850,12 @@
                </size>
               </property>
               <property name="text">
-               <string>Save</string>
+               <string>Save Ticker</string>
               </property>
              </widget>
             </item>
             <item row="2" column="1">
-             <widget class="QPushButton" name="pushButton_6">
+             <widget class="QPushButton" name="delTickerListButton">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                 <horstretch>0</horstretch>
@@ -707,8 +875,68 @@
                </size>
               </property>
               <property name="text">
-               <string>Delete</string>
+               <string>Delete Ticker</string>
               </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="QTableWidget" name="tickerListTableWidget">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::DashLine</enum>
+              </property>
+              <property name="rowCount">
+               <number>3</number>
+              </property>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>75</number>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>70</number>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row/>
+              <row/>
+              <column>
+               <property name="text">
+                <string>Symbol</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Last</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>%Change</string>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string/>
+               </property>
+              </item>
+              <item row="0" column="1">
+               <property name="text">
+                <string/>
+               </property>
+              </item>
              </widget>
             </item>
            </layout>
@@ -716,13 +944,13 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="page_2">
+       <widget class="QWidget" name="futureStrategyPage">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>302</width>
-          <height>657</height>
+          <width>250</width>
+          <height>702</height>
          </rect>
         </property>
         <attribute name="icon">
@@ -733,13 +961,13 @@
          <string>Futures Strategy</string>
         </attribute>
        </widget>
-       <widget class="QWidget" name="page_3">
+       <widget class="QWidget" name="optionStrategyPage">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>302</width>
-          <height>657</height>
+          <width>250</width>
+          <height>702</height>
          </rect>
         </property>
         <attribute name="icon">
@@ -749,23 +977,69 @@
         <attribute name="label">
          <string>Option Strategy</string>
         </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <widget class="QGroupBox" name="optionStrategyGroupBox">
+           <property name="title">
+            <string>Option Strategy</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QComboBox" name="optionStrategyComboBox">
+              <item>
+               <property name="text">
+                <string>Select a Strategy</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Vertical Spread</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Calender Spread</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Iron Condor Strategy</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Butterfly Strategy</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </item>
     </layout>
    </widget>
   </widget>
-  <widget class="QDockWidget" name="dockWidget_2">
+  <widget class="QDockWidget" name="dockWidget">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
    <property name="minimumSize">
     <size>
-     <width>250</width>
+     <width>310</width>
      <height>500</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>310</width>
+     <height>524287</height>
     </size>
    </property>
    <property name="acceptDrops">
@@ -786,7 +1060,7 @@
    <attribute name="dockWidgetArea">
     <number>2</number>
    </attribute>
-   <widget class="QWidget" name="dockWidgetContents_2">
+   <widget class="QWidget" name="dockWidgetContents">
     <layout class="QVBoxLayout" name="verticalLayout_16">
      <property name="spacing">
       <number>0</number>
@@ -812,12 +1086,12 @@
         <enum>QTabWidget::South</enum>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <property name="movable">
         <bool>true</bool>
        </property>
-       <widget class="QWidget" name="tab_3">
+       <widget class="QWidget" name="accountTab">
         <attribute name="title">
          <string>Account Overview</string>
         </attribute>
@@ -838,7 +1112,7 @@
           <number>3</number>
          </property>
          <item>
-          <widget class="QGroupBox" name="groupBox_3">
+          <widget class="QGroupBox" name="accountGroupBox">
            <property name="title">
             <string>Account</string>
            </property>
@@ -862,13 +1136,69 @@
              <number>3</number>
             </property>
             <item>
-             <widget class="QTableView" name="tableView_5"/>
+             <widget class="QTableWidget" name="accountTableWidget">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="rowCount">
+               <number>7</number>
+              </property>
+              <property name="columnCount">
+               <number>1</number>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string>User Name</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>Capital Used</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>Cash</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>PNL</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>Portfolio Value</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>Position Value</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>Returns</string>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string/>
+               </property>
+              </column>
+             </widget>
             </item>
            </layout>
           </widget>
          </item>
          <item>
-          <widget class="QGroupBox" name="groupBox_4">
+          <widget class="QGroupBox" name="portfolioGroupBox">
            <property name="title">
             <string>Portfolio</string>
            </property>
@@ -892,14 +1222,57 @@
              <number>3</number>
             </property>
             <item>
-             <widget class="QTableView" name="tableView_4"/>
+             <widget class="QTableWidget" name="portfolioTableWidget">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>70</number>
+              </attribute>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>Symbol</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Amount</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Cost</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Last Price</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>PNL</string>
+               </property>
+              </column>
+             </widget>
             </item>
            </layout>
           </widget>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab_4">
+       <widget class="QWidget" name="tradingTab">
         <attribute name="title">
          <string>Trading</string>
         </attribute>
@@ -920,12 +1293,18 @@
           <number>3</number>
          </property>
          <item>
-          <widget class="QGroupBox" name="groupBox_6">
+          <widget class="QGroupBox" name="tradingOrdersGroupBox">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>16777215</height>
+            </size>
            </property>
            <property name="title">
             <string>Trading Orders</string>
@@ -933,9 +1312,9 @@
            <property name="alignment">
             <set>Qt::AlignCenter</set>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_15">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
             <property name="spacing">
-             <number>7</number>
+             <number>3</number>
             </property>
             <property name="leftMargin">
              <number>3</number>
@@ -950,20 +1329,161 @@
              <number>3</number>
             </property>
             <item>
-             <widget class="QTableWidget" name="tableWidget"/>
+             <widget class="QTableWidget" name="askBidTableWidget">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::DashLine</enum>
+              </property>
+              <attribute name="horizontalHeaderDefaultSectionSize">
+               <number>60</number>
+              </attribute>
+              <attribute name="horizontalHeaderMinimumSectionSize">
+               <number>50</number>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string>Num</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Bid</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Ask</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Num</string>
+               </property>
+              </column>
+             </widget>
             </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <widget class="QLineEdit" name="lineEdit_3"/>
+               <widget class="QComboBox" name="orderTypeComboBox">
+                <property name="currentText">
+                 <string>LMT</string>
+                </property>
+                <property name="maxVisibleItems">
+                 <number>5</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>LMT</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>MKT</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>STL</string>
+                 </property>
+                </item>
+               </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_9">
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
+               <widget class="QLineEdit" name="priceLineEdit">
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
-                <property name="text">
-                 <string>Quantity</string>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhDigitsOnly</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="orderNumComboBox">
+                <property name="editable">
+                 <bool>false</bool>
+                </property>
+                <property name="currentText">
+                 <string>Num</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Num</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>100</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>200</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>500</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1000</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Other</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="orderNumLineEdit">
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
                </widget>
               </item>
@@ -972,7 +1492,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
-               <widget class="QPushButton" name="pushButton_7">
+               <widget class="QPushButton" name="buyPushButton">
                 <property name="font">
                  <font>
                   <pointsize>9</pointsize>
@@ -989,7 +1509,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_8">
+               <widget class="QPushButton" name="sellPushButton">
                 <property name="font">
                  <font>
                   <pointsize>9</pointsize>
@@ -1008,25 +1528,25 @@
              </layout>
             </item>
            </layout>
-           <zorder>pushButton_7</zorder>
-           <zorder>pushButton_8</zorder>
-           <zorder>tableWidget</zorder>
-           <zorder>lineEdit_3</zorder>
-           <zorder>pushButton_9</zorder>
-           <zorder>groupBox_5</zorder>
           </widget>
          </item>
          <item>
-          <widget class="QGroupBox" name="groupBox_5">
+          <widget class="QGroupBox" name="pendingOrderGroupBox">
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="title">
             <string>Pending Orders</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_11">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
             <property name="spacing">
-             <number>7</number>
+             <number>3</number>
             </property>
             <property name="leftMargin">
              <number>3</number>
@@ -1041,54 +1561,88 @@
              <number>3</number>
             </property>
             <item>
-             <widget class="QTableView" name="tableView_6"/>
+             <widget class="QTableView" name="pendingOrdersTableView">
+              <property name="gridStyle">
+               <enum>Qt::DashLine</enum>
+              </property>
+             </widget>
             </item>
             <item>
-             <layout class="QGridLayout" name="gridLayout_2">
-              <item row="0" column="0">
-               <widget class="QLineEdit" name="lineEdit_4"/>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLineEdit" name="orderQuantityLineEdit"/>
               </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="pushButton_11">
+              <item>
+               <widget class="QPushButton" name="orderPricePushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string>Change Quantity</string>
+                 <string>Quantity</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="0">
-               <widget class="QLineEdit" name="lineEdit_5"/>
+              <item>
+               <widget class="QLineEdit" name="orderPriceLineEdit"/>
               </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="pushButton_12">
+              <item>
+               <widget class="QPushButton" name="orderPricePushButton_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="cursor">
                  <cursorShape>PointingHandCursor</cursorShape>
                 </property>
                 <property name="text">
-                 <string>Change Price</string>
+                 <string>Price</string>
                 </property>
                </widget>
               </item>
              </layout>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_10">
-              <property name="font">
-               <font>
-                <pointsize>9</pointsize>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>PointingHandCursor</cursorShape>
-              </property>
-              <property name="text">
-               <string>Cancel Order</string>
-              </property>
-             </widget>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QPushButton" name="updatePushButton">
+                <property name="font">
+                 <font>
+                  <pointsize>9</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Update Order</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="cancelPushButton">
+                <property name="font">
+                 <font>
+                  <pointsize>9</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Cancel Order</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </widget>
@@ -1192,6 +1746,12 @@
    </property>
   </action>
   <action name="actionControl">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../Resource/resource.qrc">
      <normaloff>:/Images/control.png</normaloff>:/Images/control.png</iconset>
@@ -1200,7 +1760,13 @@
     <string>Control</string>
    </property>
   </action>
-  <action name="actionMessages">
+  <action name="actionAccount">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../Resource/resource.qrc">
      <normaloff>:/Images/Account.png</normaloff>:/Images/Account.png</iconset>
@@ -1209,7 +1775,13 @@
     <string>Account Overview</string>
    </property>
   </action>
-  <action name="actionText_Data">
+  <action name="actionTrading">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../Resource/resource.qrc">
      <normaloff>:/Images/Trading.png</normaloff>:/Images/Trading.png</iconset>
@@ -1233,7 +1805,7 @@
      <normaloff>:/Images/database.png</normaloff>:/Images/database.png</iconset>
    </property>
    <property name="text">
-    <string>Get Data From Local Database</string>
+    <string>Connect to Local Database</string>
    </property>
   </action>
   <action name="actionCandelsticks_Plot">
@@ -1272,9 +1844,53 @@
     <string>Quit</string>
    </property>
   </action>
+  <action name="actionOption_Chain">
+   <property name="icon">
+    <iconset resource="../Resource/resource.qrc">
+     <normaloff>:/Images/option.png</normaloff>:/Images/option.png</iconset>
+   </property>
+   <property name="text">
+    <string>Option Chain</string>
+   </property>
+  </action>
+  <action name="actionFuture_Chain">
+   <property name="icon">
+    <iconset resource="../Resource/resource.qrc">
+     <normaloff>:/Images/future.jpg</normaloff>:/Images/future.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Future Chain</string>
+   </property>
+  </action>
+  <action name="actionOne_Chart">
+   <property name="icon">
+    <iconset resource="../Resource/resource.qrc">
+     <normaloff>:/Images/chart.jpg</normaloff>:/Images/chart.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>One Chart</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="../Resource/resource.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>635</x>
+     <y>461</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

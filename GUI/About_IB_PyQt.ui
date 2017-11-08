@@ -28,10 +28,10 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>About IB_PyQt</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Resource/resource.qrc">
+   <iconset resource="../Resource/resource.qrc">
     <normaloff>:/Images/IB.png</normaloff>:/Images/IB.png</iconset>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
@@ -82,8 +82,14 @@
       <property name="text">
        <string>IB_PyQt is powered by API from IBridgePy and IbPy. The GUI interface is designed using PyQt. I wrote this program because I need to practice my programming. Also I am very interested in financial market. It is better to make something than just reading books or watching videos about programming.</string>
       </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
       <property name="wordWrap">
        <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
       </property>
      </widget>
     </item>
@@ -105,6 +111,9 @@
       </property>
       <property name="wordWrap">
        <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
       </property>
      </widget>
     </item>
@@ -142,6 +151,9 @@
       <property name="wordWrap">
        <bool>true</bool>
       </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+      </property>
      </widget>
     </item>
     <item>
@@ -158,10 +170,13 @@
        </font>
       </property>
       <property name="text">
-       <string>Interactive Brokers API -&gt;https://www.interactivebrokers.com/en/index.php?f=5041 </string>
+       <string>Interactive Brokers API -&gt; https://www.interactivebrokers.com/en/index.php?f=5041 </string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::TextBrowserInteraction</set>
       </property>
      </widget>
     </item>
@@ -183,6 +198,9 @@
       </property>
       <property name="wordWrap">
        <bool>true</bool>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
       </property>
      </widget>
     </item>
@@ -210,7 +228,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource/resource.qrc">:/Images/IB.png</pixmap>
+       <pixmap resource="../Resource/resource.qrc">:/Images/IB.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -229,7 +247,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource/resource.qrc">:/Images/Qt.jpg</pixmap>
+       <pixmap resource="../Resource/resource.qrc">:/Images/Qt.jpg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -248,7 +266,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="Resource/resource.qrc">:/Images/pythonlogo.jpg</pixmap>
+       <pixmap resource="../Resource/resource.qrc">:/Images/pythonlogo.jpg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -283,14 +301,15 @@
   <zorder>label_10</zorder>
  </widget>
  <resources>
-  <include location="Resource/resource.qrc"/>
+  <include location="../Resource/resource.qrc"/>
+  <include location="../Resource/resource.qrc"/>
  </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>
-   <signal>accepted()</signal>
+   <signal>clicked(QAbstractButton*)</signal>
    <receiver>Dialog</receiver>
-   <slot>accept()</slot>
+   <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>248</x>
@@ -298,22 +317,6 @@
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
      <y>274</y>
     </hint>
    </hints>
